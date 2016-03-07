@@ -8,4 +8,4 @@ RUN   sed -i "s|DocumentRoot\ \/var\/www\/html|DocumentRoot\ \/var\/www\/html\/$
 
 RUN echo "#${SITEPATH}" >> /etc/apache2/apache2.conf
 
-CMD ["sh", "-c", "echo ${SITEPATH} >> /etc/apache2/apache2.conf"]
+RUN ["sh", "-c", "echo #${SITEPATH} >> /etc/apache2/apache2.conf"]
